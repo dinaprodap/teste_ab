@@ -109,59 +109,48 @@ Os usuários descobrem e passam a utilizar funcionalidades que não acessavam an
 Retorno do teste: Observamos que usuários específicos começaram a acessar novas funcionalidades que não faziam parte de sua rotina após a implementação das recomendações.
 """)
 
-# Dados de descoberta de funcionalidades
-dados_descoberta = {
-    "Usuário": ["Rogério Paini", "Rogério Paini", "Luiz Franco", "Vlademir Barbosa"],
-    "Funcionalidade": ["Rebanho", "Qualidade da Rotina", "Score de Fezes", "Itens Produtivos"],
-    "Período": ["Antes", "Depois", "Antes", "Antes"],
-    "Acessos": [0, 1, 0, 0]
+# Criando um layout estilizado para mostrar as descobertas
+st.markdown("""
+<style>
+.descoberta-box {
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px 0;
 }
+.usuario-nome {
+    color: #2E86C1;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+.funcionalidades {
+    margin-left: 20px;
+    color: #555;
+}
+</style>
 
-df_descoberta = pd.DataFrame(dados_descoberta)
+<div class="descoberta-box">
+    <div class="usuario-nome">👤 Rogério Paini</div>
+    <div class="funcionalidades">
+        ➜ Rebanho<br>
+        ➜ Qualidade da Rotina
+    </div>
+</div>
 
-# Criar uma linha "Depois" para cada funcionalidade com valor 1
-novas_linhas = []
-for usuario in df_descoberta["Usuário"].unique():
-    funcionalidades = df_descoberta[df_descoberta["Usuário"] == usuario]["Funcionalidade"].unique()
-    for func in funcionalidades:
-        novas_linhas.append({
-            "Usuário": usuario,
-            "Funcionalidade": func,
-            "Período": "Depois",
-            "Acessos": 1
-        })
+<div class="descoberta-box">
+    <div class="usuario-nome">👤 Luiz Franco</div>
+    <div class="funcionalidades">
+        ➜ Score de Fezes
+    </div>
+</div>
 
-df_descoberta = pd.concat([df_descoberta, pd.DataFrame(novas_linhas)], ignore_index=True)
-
-# Criar o gráfico de barras agrupadas
-fig3 = px.bar(
-    df_descoberta,
-    x="Funcionalidade",
-    y="Acessos",
-    color="Período",
-    barmode="group",
-    title="Descoberta de Novas Funcionalidades por Usuário",
-    text="Usuário",
-    color_discrete_map={"Antes": "#E8E8E8", "Depois": "#2E86C1"}
-)
-
-fig3.update_traces(
-    textposition='outside',
-    textangle=0
-)
-
-fig3.update_layout(
-    showlegend=True,
-    xaxis_title="Funcionalidade",
-    yaxis_title="Status de Acesso",
-    yaxis=dict(
-        tickmode='array',
-        tickvals=[0, 1],
-        ticktext=['Não Acessava', 'Passou a Acessar']
-    )
-)
-
-st.plotly_chart(fig3, use_container_width=True)
+<div class="descoberta-box">
+    <div class="usuario-nome">👤 Vlademir Barbosa</div>
+    <div class="funcionalidades">
+        ➜ Itens Produtivos
+    </div>
+</div>
+""", unsafe_allow_html=True)
 
 # Detalhamento dos grupos
 st.subheader("🔍 Detalhamento dos Grupos")
