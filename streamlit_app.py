@@ -162,35 +162,12 @@ st.markdown("""
 </div>
 """, unsafe_allow_html=True)
 
-# Detalhamento dos grupos
-st.subheader("🔍 Detalhamento dos Grupos")
-col1, col2 = st.columns(2)
-
-with col1:
-    st.markdown("""
-    **Grupo Com Recomendação:**
-    - 12 usuários totais
-    - 8 usuários ativos no período
-    - 7 utilizaram a recomendação
-    - Redução de 43% no uso geral
-    - Redução de 48% nos cliques no menu inicial
-    - 295 acessos médios às funcionalidades
-    """)
-
-with col2:
-    st.markdown("""
-    **Grupo Sem Recomendação:**
-    - 12 usuários totais
-    - Redução de 42% no uso geral
-    - Redução de 43% nos cliques no menu inicial
-    - 97 acessos médios às funcionalidades
-    """)
 
 # Conclusões principais
 st.subheader("📋 Principais Conclusões")
 st.markdown("""
-- A funcionalidade de recomendação teve uma alta taxa de adoção (88% dos usuários ativos).
-- Ambos os grupos apresentaram redução similar no uso geral do app (42-43%).
-- O grupo com recomendação apresentou uma taxa de cliques no menu inicial 5% menor que o grupo sem recomendação.
-- Os usuários com acesso à recomendação realizaram 33% mais acessos medios mensais às funcionalidades sugeridas.
+- A funcionalidade de recomendação teve uma considerável taxa de adesão (88% dos usuários ativos).
+- Ambos os grupos apresentaram redução similar no uso geral do app (42-43%), porém o grupo com recomendação apresentou uma taxa de cliques no menu inicial 5% menor que o grupo sem recomendação.
+- Os usuários com acesso à recomendação realizaram 204% mais acessos medios mensais às funcionalidades sugeridas.
+- 43% dos usuários (3 de 7) que utilizaram a funcionalidade, acessaram funcionalidades novas as quais não tinham o hábito anteriormente.
 """)
