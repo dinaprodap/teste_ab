@@ -107,7 +107,7 @@ st.markdown("""
 Os usuários descobrem e passam a utilizar funcionalidades que não acessavam anteriormente através das recomendações.
 
 Retorno do teste: Observamos que usuários específicos começaram a acessar novas funcionalidades que não faziam parte de sua rotina após a implementação das recomendações.
-Através da funcionalidade de recomendação de telas, observamos mudanças significativas no comportamento dos usuários. Rogério Paini, que anteriormente não costumava acessar as funcionalidades de rebanho e qualidade da rotina, incorporou essas ferramentas em sua rotina de uso. De forma similar, Luiz Franco descobriu e passou a utilizar o score de fezes, uma funcionalidade que nunca havia acessado antes. Já Vlademir Barbosa expandiu seu uso do sistema ao começar a acessar o menu de itens produtivos, demonstrando como as recomendações podem incentivar a exploração de novas funcionalidades.
+Através da funcionalidade de recomendação de telas, observamos mudanças significativas no comportamento dos usuários. Rogério Paini, que anteriormente não costumava acessar as funcionalidades de rebanho e qualidade da rotina, incorporou essas análises em sua rotina de uso. De forma similar, Luiz Franco descobriu o score de fezes, uma funcionalidade que não acessava antes. Já Vlademir Barbosa expandiu seu uso do sistema ao começar a acessar o menu de itens produtivos, demonstrando como as recomendações podem incentivar a exploração de novas funcionalidades.
             """)
 
 # Criando um layout estilizado para mostrar as descobertas
