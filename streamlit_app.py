@@ -9,7 +9,7 @@ st.set_page_config(page_title="Análise de Recomendação de Telas", layout="wid
 # Título e Introdução
 st.title("📊 Análise teste A/B - Recomendação de Telas")
 st.markdown("""
-    <p Obetivo geral do teste:</p> Melhorar a usabilidade e aumentar o engajamento dos usuários do LORE
+**Objetivo geral do teste:** Melhorar a usabilidade e aumentar o engajamento dos usuários do LORE
 """)
 
 
