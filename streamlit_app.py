@@ -9,11 +9,20 @@ st.set_page_config(page_title="Análise de Recomendação de Telas", layout="wid
 # Título e Introdução
 st.title("📊 Análise teste A/B - Recomendação de Telas")
 st.markdown("""
-    Análise comparativa entre dois grupos de controle com 12 usuários cada, avaliando o impacto 
-    da implementação da funcionalidade de recomendação de telas.
+    <p Obetivo geral do teste:</p> Melhorar a usabilidade e aumentar o engajamento dos usuários do LORE
 """)
 
+
+st.write("Para este teste, foram selecionados aleatoriamente 24 usuários do tipo cliente que realizaram ao menos um clique na LORE em funcionalidades de pasto, entre 09/09/24 e 09/10/24.")
+
+st.write("O grupo 1, formado por 12 desses usuários, recebeu a funcionalidade de recomendação de telas.")
+
+st.write("Já o grupo 2, com as mesmas características e também definido aleatoriamente, continuou utilizando o app sem essa recomendação, servindo como grupo de comparação.")
+
+
 # KPIs principais
+st.subheader("KPIs principais")
+
 col1, col2, col3 = st.columns(3)
 with col1:
     st.metric(
