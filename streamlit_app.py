@@ -66,7 +66,7 @@ st.subheader("📋 Hipótese: Aumento do Engajamento dos Usuários")
 st.markdown("""
 Usuários que recebem recomendações personalizadas entre telas interagem mais com o aplicativo, aumentando o número de cliques em comparação com os que não recebem recomendações e em comparação à utilização nos meses anteriores.
 
-Retorno do teste: Os usuários com acesso à recomendação realizaram 204% mais acessos medios mensais às funcionalidades sugeridas.
+**Retorno do teste:** Os usuários com acesso à recomendação realizaram 204% mais acessos medios mensais às funcionalidades sugeridas.
 """)
 # Gráfico de acessos às funcionalidades
 
@@ -85,7 +85,7 @@ st.subheader("📋 Hipótese: Adesão às Recomendações ")
 st.markdown("""
 Usuários expostos ao algoritmo de recomendação aderem as recomendações na maior parte das vezes, de forma a não precisarem mudar sua rota de navegação para buscarem por outras telas de indicadores no aplicativo.
                       
-Retorno do teste: No geral, o app sofreu uma queda no percentual de cliques entre outubro/novembro e dezembro/janeiro. No entanto, o grupo com recomendação apresentou uma taxa de cliques no menu inicial 5% menor que o grupo sem recomendação. 
+**Retorno do teste:** No geral, o app sofreu uma queda no percentual de cliques entre outubro/novembro e dezembro/janeiro. No entanto, o grupo com recomendação apresentou uma taxa de cliques no menu inicial 5% menor que o grupo sem recomendação. 
             Além disto, tivemos 88% de adesão às recomendações por parte dos usuários.
 """)
 
@@ -115,7 +115,7 @@ st.subheader("📋 Hipótese: Descoberta de Novas Funcionalidades")
 st.markdown("""
 Os usuários descobrem e passam a utilizar funcionalidades que não acessavam anteriormente através das recomendações.
 
-Retorno do teste: Observamos que usuários específicos começaram a acessar novas funcionalidades que não faziam parte de sua rotina após a implementação das recomendações.
+**Retorno do teste:** Observamos que usuários específicos começaram a acessar novas funcionalidades que não faziam parte de sua rotina após a implementação das recomendações.
 Através da funcionalidade de recomendação de telas, observamos mudanças significativas no comportamento dos usuários. Rogério Paini, que anteriormente não costumava acessar as funcionalidades de rebanho e qualidade da rotina, incorporou essas análises em sua rotina de uso. De forma similar, Luiz Franco descobriu o score de fezes, uma funcionalidade que não acessava antes. Já Vlademir Barbosa expandiu seu uso do sistema ao começar a acessar o menu de itens produtivos, demonstrando como as recomendações podem incentivar a exploração de novas funcionalidades.
             """)
 
