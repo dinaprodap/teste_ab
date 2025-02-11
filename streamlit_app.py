@@ -72,7 +72,7 @@ fig2.update_traces(textposition='outside')
 st.plotly_chart(fig2, use_container_width=True)
 
 #Hipotese 2
-st.subheader("📋 Hipótese 1:")
+st.subheader("📋 Hipótese 2:")
 st.markdown("""
 Usuários expostos ao algoritmo de recomendação aderem as recomendações na maior parte das vezes, de forma a não precisarem mudar sua rota de navegação para buscarem por outras telas de indicadores no aplicativo.
             
