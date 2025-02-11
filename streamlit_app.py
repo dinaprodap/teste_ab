@@ -53,16 +53,16 @@ df_acessos = pd.DataFrame(dados_acessos)
 st.subheader("📉 Comparativo de Reduções")
 fig1 = go.Figure()
 fig1.add_trace(go.Bar(
-    name="Redução no Uso do App",
+    name="Redução geral no Uso do App",
     x=df_uso["Grupo"],
-    y=df_uso["Redução no Uso do App"],
-    text=df_uso["Redução no Uso do App"].apply(lambda x: f"{x}%"),
+    y=df_uso["Redução geral no Uso do App"],
+    text=df_uso["Redução geral no Uso do App"].apply(lambda x: f"{x}%"),
 ))
 fig1.add_trace(go.Bar(
-    name="Redução nos Cliques do Menu",
+    name="Redução nos Cliques do Menu inicial",
     x=df_uso["Grupo"],
-    y=df_uso["Redução nos Cliques do Menu"],
-    text=df_uso["Redução nos Cliques do Menu"].apply(lambda x: f"{x}%"),
+    y=df_uso["Redução nos Cliques do Menu inicial"],
+    text=df_uso["Redução nos Cliques do Menu inicial"].apply(lambda x: f"{x}%"),
 ))
 fig1.update_layout(
     barmode='group',
