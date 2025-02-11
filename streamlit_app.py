@@ -76,7 +76,7 @@ st.subheader("📋 Hipótese 2:")
 st.markdown("""
 Usuários expostos ao algoritmo de recomendação aderem as recomendações na maior parte das vezes, de forma a não precisarem mudar sua rota de navegação para buscarem por outras telas de indicadores no aplicativo.
             
-Retorno do teste: O grupo com recomendação apresentou uma taxa de cliques no menu inicial 5% menor que o grupo sem recomendação.
+Retorno do teste: O grupo com recomendação apresentou uma taxa de cliques no menu inicial 5% menor que o grupo sem recomendação. Além disto, tivemos 88% de adesão às recomendações por parte dos usuários.
 """)
 
 st.subheader("📉 Comparativo de Reduções")
