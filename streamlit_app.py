@@ -53,14 +53,14 @@ df_acessos = pd.DataFrame(dados_acessos)
 # Visualizações
 
 #Hipotese 1
-st.subheader("📋 Hipótese 1:")
+st.subheader("📋 Hipótese: Aumento do Engajamento dos Usuários")
 st.markdown("""
 Usuários que recebem recomendações personalizadas entre telas interagem mais com o aplicativo, aumentando o número de cliques em comparação com os que não recebem recomendações e em comparação à utilização nos meses anteriores.
 
 Retorno do teste: Os usuários com acesso à recomendação realizaram 33% mais acessos medios mensais às funcionalidades sugeridas.
 """)
 # Gráfico de acessos às funcionalidades
-st.subheader("📈 Acessos às Funcionalidades Sugeridas")
+
 fig2 = px.bar(
     df_acessos,
     x="Grupo",
