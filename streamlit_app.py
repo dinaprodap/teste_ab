@@ -52,7 +52,6 @@ dados_acessos = {
 df_acessos = pd.DataFrame(dados_acessos)
 # Visualizações
 
-
 #Hipotese 1
 st.subheader("📋 Hipótese 1:")
 st.markdown("""
@@ -71,6 +70,14 @@ fig2 = px.bar(
 )
 fig2.update_traces(textposition='outside')
 st.plotly_chart(fig2, use_container_width=True)
+
+#Hipotese 2
+st.subheader("📋 Hipótese 1:")
+st.markdown("""
+Usuários expostos ao algoritmo de recomendação aderem as recomendações na maior parte das vezes, de forma a não precisarem mudar sua rota de navegação para buscarem por outras telas de indicadores no aplicativo.
+            
+Retorno do teste: O grupo com recomendação apresentou uma taxa de cliques no menu inicial 5% menor que o grupo sem recomendação.
+""")
 
 st.subheader("📉 Comparativo de Reduções")
 fig1 = go.Figure()
@@ -123,6 +130,6 @@ st.subheader("📋 Principais Conclusões")
 st.markdown("""
 - A funcionalidade de recomendação teve uma alta taxa de adoção (88% dos usuários ativos).
 - Ambos os grupos apresentaram redução similar no uso geral do app (42-43%).
-- O grupo com recomendação apresentou uma redução 5% menor nos cliques do menu inicial.
+- O grupo com recomendação apresentou uma taxa de cliques no menu inicial 5% menor que o grupo sem recomendação.
 - Os usuários com acesso à recomendação realizaram 33% mais acessos medios mensais às funcionalidades sugeridas.
 """)
