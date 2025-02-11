@@ -7,7 +7,7 @@ import plotly.graph_objects as go
 st.set_page_config(page_title="Análise de Recomendação de Telas", layout="wide")
 
 # Título e Introdução
-st.title("📊 Análise de Impacto - Recomendação de Telas")
+st.title("📊 Análise teste A/B - Recomendação de Telas")
 st.markdown("""
     Análise comparativa entre dois grupos de controle com 12 usuários cada, avaliando o impacto 
     da implementação da funcionalidade de recomendação de telas.
@@ -47,8 +47,12 @@ dados_acessos = {
     "Grupo": ["Com Recomendação", "Sem Recomendação"],
     "Acessos às Funcionalidades": [295, 97]
 }
+
+
 df_acessos = pd.DataFrame(dados_acessos)
 # Visualizações
+
+
 #Hipotese 1
 st.subheader("📋 Hipótese 1:")
 st.markdown("""
