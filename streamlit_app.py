@@ -101,6 +101,67 @@ fig1.update_layout(
 )
 st.plotly_chart(fig1, use_container_width=True)
 
+# Hipótese 3
+st.subheader("📋 Hipótese: Descoberta de Novas Funcionalidades")
+st.markdown("""
+Os usuários descobrem e passam a utilizar funcionalidades que não acessavam anteriormente através das recomendações.
+
+Retorno do teste: Observamos que usuários específicos começaram a acessar novas funcionalidades que não faziam parte de sua rotina após a implementação das recomendações.
+""")
+
+# Dados de descoberta de funcionalidades
+dados_descoberta = {
+    "Usuário": ["Rogério Paini", "Rogério Paini", "Luiz Franco", "Vlademir Barbosa"],
+    "Funcionalidade": ["Rebanho", "Qualidade da Rotina", "Score de Fezes", "Itens Produtivos"],
+    "Período": ["Antes", "Depois", "Antes", "Antes"],
+    "Acessos": [0, 1, 0, 0]
+}
+
+df_descoberta = pd.DataFrame(dados_descoberta)
+
+# Criar uma linha "Depois" para cada funcionalidade com valor 1
+novas_linhas = []
+for usuario in df_descoberta["Usuário"].unique():
+    funcionalidades = df_descoberta[df_descoberta["Usuário"] == usuario]["Funcionalidade"].unique()
+    for func in funcionalidades:
+        novas_linhas.append({
+            "Usuário": usuario,
+            "Funcionalidade": func,
+            "Período": "Depois",
+            "Acessos": 1
+        })
+
+df_descoberta = pd.concat([df_descoberta, pd.DataFrame(novas_linhas)], ignore_index=True)
+
+# Criar o gráfico de barras agrupadas
+fig3 = px.bar(
+    df_descoberta,
+    x="Funcionalidade",
+    y="Acessos",
+    color="Período",
+    barmode="group",
+    title="Descoberta de Novas Funcionalidades por Usuário",
+    text="Usuário",
+    color_discrete_map={"Antes": "#E8E8E8", "Depois": "#2E86C1"}
+)
+
+fig3.update_traces(
+    textposition='outside',
+    textangle=0
+)
+
+fig3.update_layout(
+    showlegend=True,
+    xaxis_title="Funcionalidade",
+    yaxis_title="Status de Acesso",
+    yaxis=dict(
+        tickmode='array',
+        tickvals=[0, 1],
+        ticktext=['Não Acessava', 'Passou a Acessar']
+    )
+)
+
+st.plotly_chart(fig3, use_container_width=True)
 
 # Detalhamento dos grupos
 st.subheader("🔍 Detalhamento dos Grupos")
