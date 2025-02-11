@@ -48,8 +48,20 @@ dados_acessos = {
     "Acessos às Funcionalidades": [295, 97]
 }
 df_acessos = pd.DataFrame(dados_acessos)
-
 # Visualizações
+# Gráfico de acessos às funcionalidades
+st.subheader("📈 Acessos às Funcionalidades Sugeridas")
+fig2 = px.bar(
+    df_acessos,
+    x="Grupo",
+    y="Acessos às Funcionalidades",
+    text_auto=True,
+    title="Média de Acessos mensal às Funcionalidades por Grupo (nov/dez)"
+)
+fig2.update_traces(textposition='outside')
+st.plotly_chart(fig2, use_container_width=True)
+
+
 st.subheader("📉 Comparativo de Reduções")
 fig1 = go.Figure()
 fig1.add_trace(go.Bar(
@@ -71,17 +83,6 @@ fig1.update_layout(
 )
 st.plotly_chart(fig1, use_container_width=True)
 
-# Gráfico de acessos às funcionalidades
-st.subheader("📈 Acessos às Funcionalidades Sugeridas")
-fig2 = px.bar(
-    df_acessos,
-    x="Grupo",
-    y="Acessos às Funcionalidades",
-    text_auto=True,
-    title="Média de Acessos mensal às Funcionalidades por Grupo (nov/dez)"
-)
-fig2.update_traces(textposition='outside')
-st.plotly_chart(fig2, use_container_width=True)
 
 # Detalhamento dos grupos
 st.subheader("🔍 Detalhamento dos Grupos")
