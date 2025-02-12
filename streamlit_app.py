@@ -14,7 +14,7 @@ st.markdown("""
 
 
 st.write("Para este teste, foram selecionados aleatoriamente 24 usuários do tipo cliente que realizaram ao menos 5 cliques na LORE em funcionalidades de pasto, entre 09/09/24 e 09/10/24.")
-st.write("Além disto, 6 usuários do tipo consultor também foram selecionados aleatoriamente com a premissa de que tivessem realizado ao menos dois clique na LORE em funcionalidades de pasto, entre 09/09/24 e 09/10/24.")
+st.write("Além disto, 6 usuários do tipo consultor também foram selecionados aleatoriamente com a premissa de que tivessem realizado ao menos dois cliques na LORE em funcionalidades de pasto, entre 09/09/24 e 09/10/24.")
 
 st.write("O grupo 1, formado por 12 desses usuários do tipo cliente e 3 do tipo consultor, passaram a visualizar a funcionalidade de recomendação de telas no app.")
 
